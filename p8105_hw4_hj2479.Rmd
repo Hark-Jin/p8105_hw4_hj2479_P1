@@ -1,0 +1,27 @@
+---
+title: "p8105_hw4_hj2479_P1"
+author: "He Jin"
+date: "10/25/2017"
+output:
+  html_document: 
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, collapse = TRUE, message = FALSE)
+library(tidyverse)
+library(dplyr)
+library(readxl)
+library(janitor)
+library(ggplot2)
+```
+
+In Problems 1 and 2, I worked with Chuhan Zhou (UNI: cz2493).
+
+### Problem 1 
+```{r}
+pups_data = readr::read_csv(file = "./FAS_pups.csv")
+
+```
+

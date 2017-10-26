@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"p8105_hw4_hj2479_P1\"\nauthor: \"He Jin\"\ndate: \"10/25/2017\"\noutput:\n  html_document: \n    toc: true\n    toc_float: true\n---\n\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE, collapse = TRUE, message = FALSE)\nlibrary(tidyverse)\nlibrary(dplyr)\nlibrary(readxl)\nlibrary(janitor)\nlibrary(ggplot2)\n```\n\nIn Problems 1 and 2, I worked with Chuhan Zhou (UNI: cz2493).\n\n### Problem 1 \n```{r}\npups_data = readr::read_csv(file = \"./FAS_pups.csv\")\n\n```\n\n",
+    "created" : 1508978478724.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1101100425",
+    "id" : "8A984CE5",
+    "lastKnownWriteTime" : 1508979650,
+    "last_content_update" : 1508979650816,
+    "path" : "~/Desktop/Columbia/Semester 1/DATA SCIENCE - 1/homework/p8105_hw4_hj2479/p8105_hw4_hj2479.Rmd",
+    "project_path" : "p8105_hw4_hj2479.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
