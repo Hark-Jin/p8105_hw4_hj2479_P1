@@ -21,7 +21,9 @@ In Problems 1 and 2, I worked with Chuhan Zhou (UNI: cz2493).
 
 ### Problem 1 
 ```{r}
-pups_data = readr::read_csv(file = "./FAS_pups.csv")
+pups_data = readr::read_csv(file = "./FAS_pups.csv") %>% 
+  clean_names() %>% 
+  gather(key = pd_outcome, value = scores, pd_ears:pd_walk)
 
 ```
 
