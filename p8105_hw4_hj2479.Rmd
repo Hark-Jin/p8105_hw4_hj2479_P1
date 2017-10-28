@@ -7,8 +7,10 @@ output:
     toc: true
     toc_float: true
 ---
+###Problem1
+##part1
 
-```{r setup, include=FALSE}
+```{r setup,message=FALSE,warning=FALSE, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, collapse = TRUE, message = FALSE)
 library(tidyverse)
 library(dplyr)
@@ -17,16 +19,19 @@ library(janitor)
 library(ggplot2)
 library(ggridges)
 ```
-
-In Problems 1 and 2, I worked with Chuhan Zhou (UNI: cz2493).
-
-### Problem 1 
 ```{r}
 pups_data = readr::read_csv(file = "./FAS_pups.csv") %>% 
   clean_names() %>% 
   gather(key = pd_outcome, value = days, pd_ears:pd_walk)
+```
+
+##part2
+```{r,warning=FALSE}
 ggplot(pups_data,aes(x = days,y = pd_outcome)) + 
   geom_density_ridges(aes(fill = pd_outcome), scale = .85) + 
+  ggtitle("The Distribution of Post-natal Days \nfor Each Developmental Landmark") +
   theme_bw() 
 ```
+
+
 
