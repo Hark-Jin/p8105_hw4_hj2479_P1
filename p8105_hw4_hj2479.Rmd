@@ -7,8 +7,9 @@ output:
     toc: true
     toc_float: true
 ---
+
 ###Problem1
-##part1
+##Part1
 
 ```{r setup,message=FALSE,warning=FALSE, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, collapse = TRUE, message = FALSE)
@@ -26,7 +27,7 @@ pups_data = readr::read_csv(file = "./FAS_pups.csv") %>%
   gather(key = pd_outcome, value = days, pd_ears:pd_walk)
 ```
 
-##part2
+##Part2
 ```{r, plot, warning=FALSE}
 ggplot(pups_data,aes(x = days,y = pd_outcome)) + 
   geom_density_ridges(aes(fill = pd_outcome), scale = .85) + 

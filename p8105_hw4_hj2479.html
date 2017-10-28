@@ -226,13 +226,13 @@ div.tocify {
 <h3>Problem1</h3>
 </div>
 <div id="part1" class="section level2">
-<h2>part1</h2>
+<h2>Part1</h2>
 <pre class="r"><code>pups_data = readr::read_csv(file = &quot;./FAS_pups.csv&quot;) %&gt;% 
   clean_names() %&gt;% 
   gather(key = pd_outcome, value = days, pd_ears:pd_walk)</code></pre>
 </div>
 <div id="part2" class="section level2">
-<h2>part2</h2>
+<h2>Part2</h2>
 <pre class="r"><code>ggplot(pups_data,aes(x = days,y = pd_outcome)) + 
   geom_density_ridges(aes(fill = pd_outcome), scale = .85) + 
   ggtitle(&quot;The Distribution of Post-natal Days \nfor Each Developmental Landmark&quot;) +
