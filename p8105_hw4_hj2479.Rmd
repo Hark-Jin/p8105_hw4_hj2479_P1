@@ -10,7 +10,7 @@ output:
 
 ###Problem1
 ##Part1
-
+Load and tidy the data, then convert the data to long format.
 ```{r setup,message=FALSE,warning=FALSE, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, collapse = TRUE, message = FALSE)
 library(tidyverse)
@@ -27,7 +27,8 @@ pups_data = readr::read_csv(file = "./FAS_pups.csv") %>%
   gather(key = pd_outcome, value = days, pd_ears:pd_walk)
 ```
 
-##Part2
+##Part2  
+Create a plot showing the distribution of post-natal days for each developmental landmark.
 ```{r, plot, warning=FALSE}
 ggplot(pups_data,aes(x = days,y = pd_outcome)) + 
   geom_density_ridges(aes(fill = pd_outcome), scale = .85) + 
@@ -35,5 +36,7 @@ ggplot(pups_data,aes(x = days,y = pd_outcome)) +
   theme_bw() 
 ```
 
+**Comment**  
+According to the plot, we can see the median for pd_ears is roughly around 4 days, 14 days for pd_eyes, 7 days for pd_pivot, 10 days for pd-walk respectively.
 
 
